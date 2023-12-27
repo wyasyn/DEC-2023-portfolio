@@ -1,0 +1,31 @@
+.service {
+    display: flex;
+    align-items: center;
+    padding: 1.8em 2.2em;
+    border-radius: 8px;
+    gap: 1rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--bg-400);
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--clr-heading);
+        color: var(--bg-500);
+        font-size: 1.2rem;
+        padding: 0.3em;
+        border-radius: 50%;
+    }
+    &:nth-child(2) {
+        .icon {
+            background-color: var(--clr-primary);
+            color: var(--clr-heading);
+        }
+    }
+    &:nth-child(3) {
+        .icon {
+            background-color: var(--bg-500);
+            color: var(--clr-heading);
+        }
+    }
+}

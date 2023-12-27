@@ -1,0 +1,31 @@
+.stats {
+    padding-block: 10em;
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 3rem;
+        background-color: var(--bg-500);
+        padding: 3em;
+        border-radius: 15px;
+        background-image: url("/assets/blob1.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: -50px -50px;
+        .stat {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5em;
+            p {
+                text-transform: capitalize;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        padding-block: 5em;
+        .row {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
