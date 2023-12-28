@@ -7,7 +7,7 @@
         background-color: var(--bg-500);
         padding: 3em;
         border-radius: 15px;
-        background-image: url("/assets/blob1.svg");
+        background-image: url("/assets/blob2.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: -50px -50px;
@@ -20,6 +20,9 @@
             p {
                 text-transform: capitalize;
             }
+        }
+        @media (prefers-color-scheme: dark) {
+            background-image: url("/assets/blob1.svg");
         }
     }
     @media screen and (max-width: 768px) {
