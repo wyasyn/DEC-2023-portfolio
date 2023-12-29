@@ -26,6 +26,10 @@ export const linkData = [
         name: "contact",
         url: "/contact",
     },
+    {
+        name: "admin",
+        url: "/admin",
+    },
 ];
 
 export const socialsdata = [

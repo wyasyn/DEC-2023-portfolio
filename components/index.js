@@ -5,3 +5,7 @@ export { default as AboutIntro } from "./AboutIntro/AboutIntro";
 export { default as TitleHead } from "./TitleHead/TitleHead";
 export { default as Stats } from "./Stats/Stats";
 export { default as SelectedProjects } from "./SelectedProjects/SelectedProjects";
+export { default as Testimonials } from "./Testimonials/Testimonials";
+export { default as BlogCard } from "./BlogCard/BlogCard";
+export { default as SelectedBlogs } from "./SelectedBlogs/SelectedBlogs";
+export { default as ProjectCard } from "./ProjectCard/ProjectCard";

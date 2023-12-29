@@ -1,0 +1,13 @@
+.home-blog {
+    padding-block: 7em;
+    background-color: var(--bg-500);
+    .container {
+        .blog-content {
+            margin-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            place-items: center;
+            column-gap: 2rem;
+        }
+    }
+}
