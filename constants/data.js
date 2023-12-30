@@ -82,3 +82,30 @@ export const projectInfor = {
     describe:
         "I am excited to showcase my skills and share my journey as I continue to explore and innovate in the ever-evolving world of front-end development.",
 };
+
+export const skillsData = [
+    {
+        skill: "JavaScript",
+        percent: 98,
+    },
+    {
+        skill: "php",
+        percent: 85,
+    },
+    {
+        skill: "python",
+        percent: 90,
+    },
+    {
+        skill: "css",
+        percent: 100,
+    },
+    {
+        skill: "sql",
+        percent: 90,
+    },
+    {
+        skill: "node and & frameworks",
+        percent: 90,
+    },
+];
