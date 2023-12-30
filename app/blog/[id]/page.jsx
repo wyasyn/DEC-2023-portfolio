@@ -2,8 +2,9 @@ import prisma from "@/lib/prisma";
 import Image from "next/image";
 
 export default async function page({ params }) {
+    const id = params.id;
     const blogPost = await prisma.blogPost.findUnique({
-        where: { id: parseInt(params.id) },
+        where: { id },
         include: { author: true },
     });
     return (
