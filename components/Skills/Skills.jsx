@@ -1,4 +1,4 @@
-import { skillsData } from "@/constants/data";
+import { ServicesData, skillsData } from "@/constants/data";
 import { TitleHead } from "..";
 import "./skills.scss";
 import { MdComputer } from "react-icons/md";
@@ -27,19 +27,16 @@ export default function Skills() {
                     </div>
                 </div>
                 <div className="col-2">
-                    <div className="service-item">
-                        <div className="icon">
-                            <MdComputer />
+                    {ServicesData.map((item) => (
+                        <div className="service-item" key={item.title}>
+                            <div className="icon">{item.icon}</div>
+                            <h4>{item.title}</h4>
+                            <div className="info">
+                                <h5>{item.title}</h5>
+                                <small>{item.describe}</small>
+                            </div>
                         </div>
-                        <h4>Web Dev</h4>
-                        <div className="info">
-                            <h5>Web dev</h5>
-                            <small>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Vitae recusandae site
-                            </small>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>

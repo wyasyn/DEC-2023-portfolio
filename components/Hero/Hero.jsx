@@ -5,6 +5,7 @@ import { images } from "@/constants/images";
 import { Service } from "..";
 
 export default function Hero() {
+    const selectedServ = ServicesData.slice(0, 3);
     return (
         <div className="hero">
             <div className="container">
@@ -52,7 +53,7 @@ export default function Hero() {
                         </div>
                     </div>
                     <div className="services">
-                        {ServicesData.map((item) => {
+                        {selectedServ.map((item) => {
                             return <Service key={item.title} {...item} />;
                         })}
                     </div>

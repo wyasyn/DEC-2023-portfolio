@@ -1,10 +1,8 @@
-import {
-    FaDribbble,
-    FaFacebook,
-    FaGithub,
-    FaLinkedinIn,
-    FaTwitter,
-} from "react-icons/fa";
+import { BsDatabase } from "react-icons/bs";
+import { FaEnvelope, FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { MdComputer, MdGraphicEq, MdMouse } from "react-icons/md";
+const myEmail = process.env.MY_EMAIL;
+const myPhone = process.env.MY_PHONE;
 export const linkData = [
     {
         name: "home",
@@ -36,37 +34,50 @@ export const socialsdata = [
     {
         name: "github",
         icons: <FaGithub />,
-        url: "https://www.github.com",
+        url: "https://github.com/wyasyn",
     },
     {
-        name: "twitter",
-        icons: <FaTwitter />,
-        url: "https://www.twitter.com",
+        name: "WhatsApp",
+        icons: <FaWhatsapp />,
+        url: `https://wa.me/${myPhone}`,
     },
     {
         name: "linkedin",
         icons: <FaLinkedinIn />,
-        url: "https://www.linkenin.com",
+        url: "https://www.linkedin.com/in/yasin-walum-01b18295/",
     },
     {
-        name: "dribbble",
-        icons: <FaDribbble />,
-        url: "https://www.dribbble.com",
+        name: "Email",
+        icons: <FaEnvelope />,
+        url: `mailto:${myEmail}`,
     },
 ];
 
 export const ServicesData = [
     {
+        icon: <MdComputer />,
         title: "Web Development",
-        describe: "Creative site for you",
+        line: "Design, develop",
+        describe: "Design, develop, and maintain web applications and systems",
     },
     {
+        icon: <MdGraphicEq />,
         title: "Machine Learning",
-        describe: "Data anlysis is what I do",
+        line: "Manage, maintain",
+        describe: "Manage and maintain computer systems, networks, and servers",
     },
     {
-        title: "Freelancer",
-        describe: "You can hire me now",
+        icon: <BsDatabase />,
+        title: "Database",
+        line: "Implement, store",
+        describe:
+            "Design, implement, and maintain databases for storing and retrieving data efficiently",
+    },
+    {
+        icon: <MdMouse />,
+        line: "Design, develop",
+        title: "Networks, servers",
+        describe: "Manage and maintain computer systems, networks, and servers",
     },
 ];
 

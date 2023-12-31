@@ -1,7 +1,6 @@
 import {
     AboutIntro,
     Hero,
-    Navbar,
     SelectedBlogs,
     SelectedProjects,
     Stats,

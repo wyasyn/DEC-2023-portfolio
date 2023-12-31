@@ -1,4 +1,4 @@
-import { AboutIntro, Skills } from "@/components";
+import { AboutIntro, Process, Skills } from "@/components";
 import React from "react";
 
 export default function page() {
@@ -6,6 +6,7 @@ export default function page() {
         <main>
             <AboutIntro />
             <Skills />
+            <Process />
         </main>
     );
 }

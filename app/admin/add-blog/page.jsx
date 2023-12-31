@@ -1,16 +1,22 @@
 import prisma from "@/lib/prisma";
 import { redirect } from "next/navigation";
-async function createBlog(data) {
+import toast from "react-hot-toast";
+async function createBlog(formData) {
     "use server";
-    const formData = {
-        title: data.get("title"),
-        category: data.get("category"),
-        imageUrl: data.get("imageUrl"),
-        content: data.get("content"),
-        userId: data.get("userId"),
-    };
-    await prisma.blogPost.create({ data: formData });
-    redirect("/blog");
+    try {
+        const Fdata = {
+            title: formData.get("title"),
+            category: formData.get("category"),
+            imageUrl: formData.get("imageUrl"),
+            content: formData.get("content"),
+            userId: formData.get("userId"),
+        };
+        await prisma.blogPost.create({ data: Fdata });
+        toast.success("Blog added successfully");
+        redirect("/blog");
+    } catch (error) {
+        toast.error("Failed to add blog");
+    }
 }
 
 export default async function page() {

@@ -71,11 +71,13 @@ export default function Navbar() {
                     <ul className="socials">
                         {socialsdata.map((item) => (
                             <li key={item.name} className="social">
-                                <a href={`${item.url}`}>{item.icons}</a>
+                                <a href={item.url}>{item.icons}</a>
                             </li>
                         ))}
                     </ul>
-                    <button className="btn secondary">Contact Me</button>
+                    <a href="/contact" className="btn secondary">
+                        Contact Me
+                    </a>
                     <button
                         className="menu"
                         onClick={() => {

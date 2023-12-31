@@ -1,17 +1,26 @@
 import prisma from "@/lib/prisma";
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import toast from "react-hot-toast";
 async function createProject(data) {
     "use server";
-    const formData = {
-        title: data.get("title"),
-        category: data.get("category"),
-        link: data.get("link"),
-        imageUrl: data.get("imageUrl"),
-        description: data.get("decription"),
-        userId: data.get("userId"),
-    };
-    await prisma.project.create({ data: formData });
-    redirect("/products");
+    try {
+        const formData = {
+            title: data.get("title"),
+            category: data.get("category"),
+            link: data.get("link"),
+            imageUrl: data.get("imageUrl"),
+            description: data.get("decription"),
+            userId: data.get("userId"),
+        };
+        await prisma.project.create({ data: formData });
+        toast.error("Project added successfully");
+        revalidatePath("/products");
+        revalidatePath("/");
+        redirect("/products");
+    } catch (error) {
+        toast.error("Failed to add project");
+    }
 }
 
 export default async function page() {

@@ -27,19 +27,28 @@ export default function AboutIntro() {
                     <div className="socials">
                         <h3>You can follow me also here:</h3>
                         <div className="socials-cards">
-                            <Link href="/" className="social">
+                            <Link
+                                href="https://codepen.io/wyasyn/"
+                                className="social"
+                            >
                                 <div className="icon">
                                     <FaCodepen />
                                 </div>
                                 <small className="name">CodePen</small>
                             </Link>
-                            <Link href="/" className="social">
+                            <Link
+                                href="https://www.pinterest.com/"
+                                className="social"
+                            >
                                 <div className="icon">
                                     <FaPinterestP />
                                 </div>
                                 <small className="name">Pinterest</small>
                             </Link>
-                            <Link href="/" className="social">
+                            <Link
+                                href="https://www.instagram.com/wyasyn"
+                                className="social"
+                            >
                                 <div className="icon">
                                     <FaInstagram />
                                 </div>
