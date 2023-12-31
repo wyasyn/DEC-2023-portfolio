@@ -1,0 +1,52 @@
+.sign-in-sec {
+    display: grid;
+    place-items: center;
+    min-height: 70dvh;
+    margin-block: 5em;
+    .sign-in-form {
+        width: 100%;
+        max-width: 450px;
+        margin-inline: auto;
+        background-color: var(--bg-500);
+        padding: 7em 2em;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        .form-group {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            border-bottom: 1px solid var(--clr-body);
+            padding-block: 1em;
+            input {
+                flex: 1;
+                background-color: transparent;
+                &::placeholder {
+                    color: var(--clr-body);
+                }
+            }
+        }
+        button {
+            background-color: var(--clr-primary);
+            width: 100%;
+            padding: 0.75em;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 2em;
+            display: block;
+            border: 1px solid transparent;
+            margin-top: 1.5rem;
+            transition: var(--transition);
+            &:hover,
+            &:focus-visible {
+                background-color: transparent;
+                color: var(--clr-primary);
+                border-color: var(--clr-primary);
+            }
+        }
+    }
+}

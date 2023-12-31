@@ -1,5 +1,6 @@
 import { Footer, Navbar } from "@/components";
 import "./globals.scss";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
     title: "Create Next App",
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" suppressHydrationWarning>
             <body>
+                <Toaster position="top right" />
                 <Navbar />
                 {children}
                 <Footer />
