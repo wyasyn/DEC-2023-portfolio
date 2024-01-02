@@ -1,10 +1,11 @@
 "use client";
-import { linkData, socialsdata } from "@/constants/data";
+import { linkData } from "@/constants/data";
 import "./navbar.scss";
 import { IoMenu } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
 import { usePathname } from "next/navigation";
+import { Socials } from "..";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -34,22 +35,16 @@ export default function Navbar() {
                     <span>w</span>alum.
                 </a>
                 <ul className={open ? "nav-list active" : "nav-list"}>
-                    <button
+                    <li
                         className="menu"
                         onClick={() => {
-                            <button
-                                className="menu"
-                                onClick={() => {
-                                    setOpen(false);
-                                }}
-                            >
-                                <MdClose />
-                            </button>;
                             setOpen(false);
                         }}
                     >
-                        <MdClose />
-                    </button>
+                        <button>
+                            <MdClose />
+                        </button>
+                    </li>
                     {linkData.map((item) => {
                         const isActive = pathname === item.url;
                         return (
@@ -62,19 +57,13 @@ export default function Navbar() {
                                     setOpen(false);
                                 }}
                             >
-                                <a href={`${item.url}`}>{item.name}</a>
+                                <a href={item.url}>{item.name}</a>
                             </li>
                         );
                     })}
                 </ul>
                 <div className="btns">
-                    <ul className="socials">
-                        {socialsdata.map((item) => (
-                            <li key={item.name} className="social">
-                                <a href={item.url}>{item.icons}</a>
-                            </li>
-                        ))}
-                    </ul>
+                    <Socials />
                     <a href="/contact" className="btn secondary">
                         Contact Me
                     </a>

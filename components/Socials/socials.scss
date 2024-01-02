@@ -1,0 +1,12 @@
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    svg {
+        transition: var(--transition);
+        &:hover,
+        &:focus-visible {
+            color: var(--clr-primary);
+        }
+    }
+}

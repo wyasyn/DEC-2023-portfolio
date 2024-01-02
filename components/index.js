@@ -13,3 +13,5 @@ export { default as Footer } from "./Footer/Footer";
 export { default as Skills } from "./Skills/Skills";
 export { default as Submit } from "./Submit/Submit";
 export { default as Process } from "./Process/Process";
+export { default as AboutContact } from "./AboutContact/AboutContact";
+export { default as Socials } from "./Socials/Socials";

@@ -18,6 +18,7 @@ export default function SelectedProjects() {
                                 image={item.image}
                                 name={item.name}
                                 description={item.description}
+                                category={item.category}
                             />
                         );
                     })}

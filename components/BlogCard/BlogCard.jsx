@@ -18,7 +18,6 @@ export default function BlogCard({ image, title, date, id }) {
             </div>
             <div className="blog-info">
                 <small>
-                    {" "}
                     <MdCalendarMonth /> {date}
                 </small>
                 <h3>{title}</h3>

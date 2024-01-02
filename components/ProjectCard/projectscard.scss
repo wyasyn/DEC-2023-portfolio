@@ -8,6 +8,21 @@
         object-fit: cover;
         object-position: center;
     }
+    .badge {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background-color: var(--bg-500);
+        padding: 0.3em 0.6em;
+        border-radius: 5px;
+        z-index: 2;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        font-size: clamp(0.6rem, 0.7rem + 0.8vw, 0.79rem);
+    }
     .info {
         position: absolute;
         bottom: 0;

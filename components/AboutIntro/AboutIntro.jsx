@@ -26,7 +26,8 @@ export default function AboutIntro() {
                     <TitleHead {...aboutInfor} />
                     <div className="socials">
                         <h3>You can follow me also here:</h3>
-                        <div className="socials-cards">
+                        <div className="socials-cards"
+                        >
                             <Link
                                 href="https://codepen.io/wyasyn/"
                                 className="social"

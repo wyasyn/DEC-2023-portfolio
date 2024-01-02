@@ -17,7 +17,7 @@
             }
             p {
                 margin-block: 2rem;
-                max-width: 65ch;
+                max-width: 55ch;
             }
             .btns {
                 display: flex;
@@ -31,17 +31,7 @@
                 }
             }
             .socials {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
                 margin-top: 3rem;
-                svg {
-                    transition: var(--transition);
-                    &:hover,
-                    &:focus-visible {
-                        color: var(--clr-primary);
-                    }
-                }
             }
         }
         .col-2 {

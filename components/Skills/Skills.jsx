@@ -1,7 +1,6 @@
-import { ServicesData, skillsData } from "@/constants/data";
+import { ServicesData, skillsData, skillsInfor } from "@/constants/data";
 import { TitleHead } from "..";
 import "./skills.scss";
-import { MdComputer } from "react-icons/md";
 
 export default function Skills() {
     return (
@@ -9,9 +8,9 @@ export default function Skills() {
             <div className="container">
                 <div className="col-1">
                     <TitleHead
-                        title="My Skills"
-                        intro="What my dev skills include"
-                        describe="These are the words we live by in everything we do."
+                        title={skillsInfor.title}
+                        intro={skillsInfor.intro}
+                        describe={skillsInfor.describe}
                     />
                     <div className="skills-content">
                         {skillsData.map((item) => (

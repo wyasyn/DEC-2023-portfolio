@@ -42,24 +42,12 @@
                 font-weight: 600;
                 transition: var(--transition);
             }
-            &::after {
-                position: absolute;
-                content: "";
-                width: 40%;
-                height: 2px;
-                background-color: var(--clr-primary);
-                top: 0.75rem;
-                right: 10%;
-                transition: var(--transition);
-            }
+
             &:hover,
             &:focus-visible {
                 color: var(--clr-primary);
                 span {
                     color: var(--clr-body);
-                }
-                &::after {
-                    background-color: var(--clr-body);
                 }
             }
         }
@@ -101,24 +89,13 @@
                         }
                     }
                 }
-                &::before {
-                    position: absolute;
-                    content: "";
-                    bottom: 0;
-                    right: 0;
-                    z-index: 2;
-                    width: 0;
-                    height: 2px;
-                    background-color: transparent;
-                    transition: var(--transition);
-                }
 
                 &:hover,
                 &:focus-visible {
-                    &::before {
-                        width: 80%;
-                        color: var(--clr-primary);
-                        background-color: var(--clr-primary);
+                    a {
+                        &::after {
+                            background-color: var(--clr-primary);
+                        }
                     }
                 }
             }
@@ -140,6 +117,9 @@
                     position: absolute;
                     right: 1rem;
                     top: 1rem;
+                    svg {
+                        font-size: 1.5rem;
+                    }
                 }
                 &.active {
                     left: 50%;
@@ -152,15 +132,6 @@
             align-items: center;
             gap: 2rem;
             .socials {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                svg {
-                    transition: var(--transition);
-                    &:hover {
-                        color: var(--clr-primary);
-                    }
-                }
                 @media screen and (max-width: 993px) {
                     display: none;
                 }

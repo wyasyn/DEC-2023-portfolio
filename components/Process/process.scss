@@ -1,5 +1,5 @@
 .process {
-    padding-block: 5em;
+    padding-block: 7em;
     text-align: center;
     background-color: var(--bg-500);
     .container {
@@ -17,7 +17,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: 3rem;
             margin-top: 3em;
             flex-wrap: wrap;
             .article {
@@ -36,7 +36,7 @@
             .num {
                 position: absolute;
                 top: -1rem;
-                right: 25%;
+                right: 20%;
                 background-color: var(--clr-primary);
                 padding: 1em;
                 color: #fff;
@@ -52,6 +52,6 @@
         }
     }
     @media screen and (min-width: 768px) {
-        padding-block: 7em;
+        padding-block: 10em;
     }
 }

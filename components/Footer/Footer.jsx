@@ -1,25 +1,12 @@
-import { socialsdata } from "@/constants/data";
 import "./footer.scss";
-import Link from "next/link";
+import { Socials } from "..";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
     return (
         <footer className="footer">
             <div className="container">
-                <div className="socials">
-                    {socialsdata.map((item) => {
-                        return (
-                            <Link
-                                href={item.url}
-                                className="social"
-                                key={item.name}
-                            >
-                                {item.icons}
-                            </Link>
-                        );
-                    })}
-                </div>
+                <Socials />
                 <small>
                     &copy; {currentYear} <strong>Yasin Walum.</strong> All
                     Rights Reserved

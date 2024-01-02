@@ -1,0 +1,45 @@
+.about-c {
+    padding-block: 7em;
+    .container {
+        background-color: var(--clr-primary);
+        border-radius: 8px;
+        .card-c {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 3rem;
+            background-color: var(--bg-500);
+            padding: 5em;
+            border-radius: 8px;
+            clip-path: polygon(
+                0 30%,
+                30% 0,
+                100% 0,
+                100% 100%,
+
+                0% 100%
+            );
+            .socials {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                .social {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 0.3em;
+                    svg {
+                        font-size: 1.5rem;
+                        color: var(--clr-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-block: 10em;
+    }
+}

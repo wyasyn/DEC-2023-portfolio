@@ -83,7 +83,7 @@ export const ServicesData = [
 
 export const aboutInfor = {
     title: "About Me",
-    intro: "Need Creative Design? I can Help you!",
+    intro: "Who am I.",
     describe:
         "👋 Hello! I'm, a passionate web developer and data analyst with a love for transforming data into meaningful insights and crafting web experiences that leave a lasting impression. With a blend of creativity and analytical prowess, I bring a unique perspective to every project I undertake.",
 };
@@ -92,6 +92,19 @@ export const projectInfor = {
     intro: "Selected Projects",
     describe:
         "I am excited to showcase my skills and share my journey as I continue to explore and innovate in the ever-evolving world of front-end development.",
+};
+export const skillsInfor = {
+    title: "My skills",
+    intro: "Why choose me.",
+    describe:
+        "I thrive on transforming ideas and designs into interactive and user-friendly web experiences. From responsive layouts to intuitive user interfaces, I take pride in crafting seamless, visually appealing, and engaging websites.",
+};
+
+export const BlogTitle = {
+    title: "Insights Unveiled",
+    sub: "My Blogs",
+    description:
+        "Explore captivating insights, practical tips, and personal anecdotes that illuminate the path in web development",
 };
 
 export const skillsData = [
@@ -116,7 +129,7 @@ export const skillsData = [
         percent: 90,
     },
     {
-        skill: "node and & frameworks",
+        skill: "node and & it's frameworks",
         percent: 90,
     },
 ];

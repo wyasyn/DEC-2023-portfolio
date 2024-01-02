@@ -136,3 +136,17 @@ button {
         }
     }
 }
+.btn-c {
+    font-size: clamp(0.6rem, 0.7rem + 0.8vw, 0.79rem);
+    background-color: var(--clr-primary);
+    color: #fff;
+    padding: 0.3em 0.6em;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    &:hover,
+    &:focus-visible {
+        border-color: var(--clr-primary);
+        background-color: transparent;
+    }
+}

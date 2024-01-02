@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -9,8 +10,6 @@ const AddUser = () => {
         password: "",
     });
 
-    const [message, setMessage] = useState(null);
-
     const handleInputChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -19,39 +18,29 @@ const AddUser = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch("/api/user", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                setMessage(data.message);
-
-                // Optionally, you can reset the form or redirect the user after successful submission
-                setFormData({
-                    email: "",
-                    username: "",
-                    password: "",
+            axios
+                .post("/api/user", {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                })
+                .then((res) => {
+                    setFormData({
+                        email: "",
+                        username: "",
+                        password: "",
+                    });
+                    {
+                        res.message && toast.success(res.message);
+                    }
+                })
+                .catch((err) => {
+                    toast.error(err);
                 });
-                {
-                    message && toast.success(message);
-                }
-            } else {
-                setMessage(data.message);
-                {
-                    message && toast.error(message);
-                }
-            }
         } catch (error) {
-            console.error("Error adding user:", error);
-            setMessage("Something went wrong");
             {
-                message && toast.error(message);
+                error.message && toast.error(error.message);
             }
         }
     };

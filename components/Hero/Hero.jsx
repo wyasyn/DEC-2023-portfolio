@@ -1,8 +1,8 @@
-import { ServicesData, socialsdata } from "@/constants/data";
+import { ServicesData } from "@/constants/data";
 import "./Hero.scss";
 import Image from "next/image";
 import { images } from "@/constants/images";
-import { Service } from "..";
+import { Service, Socials } from "..";
 
 export default function Hero() {
     const selectedServ = ServicesData.slice(0, 3);
@@ -17,8 +17,9 @@ export default function Hero() {
                         </h1>
                         <h2>web developer</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Laudantium, soluta!
+                            Welcome to my portfolio website! I am thrilled to
+                            have you here and share my passion for web
+                            development.
                         </p>
                         <div className="btns">
                             <a
@@ -32,13 +33,7 @@ export default function Hero() {
                                 Hire Me
                             </a>
                         </div>
-                        <ul className="socials">
-                            {socialsdata.map((item) => (
-                                <li key={item.name} className="social">
-                                    <a href={`${item.url}`}>{item.icons}</a>{" "}
-                                </li>
-                            ))}
-                        </ul>
+                        <Socials />
                     </div>
                     <div className="col-2">
                         <div className="image">
