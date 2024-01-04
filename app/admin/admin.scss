@@ -6,6 +6,17 @@
         padding: 1em;
         border-radius: 10px;
     }
+    .admin-stats {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    .logout {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
     .admin {
         display: flex;
         flex-direction: column;
@@ -15,6 +26,7 @@
         .admin-nav {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             gap: 3rem;
             .admin-item {
                 text-transform: capitalize;
@@ -43,6 +55,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                padding-block: 3em;
                 a {
                     background-color: teal;
                     color: white;

@@ -1,0 +1,14 @@
+.admin-stat {
+    padding: 2rem;
+    background-color: var(--bg-400);
+    border-radius: 5px;
+    width: fit-content;
+    flex: 1;
+    h3 {
+        margin-bottom: 1em;
+    }
+    p {
+        text-align: center;
+        font-weight: 500;
+    }
+}

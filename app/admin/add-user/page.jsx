@@ -1,7 +1,6 @@
 "use client";
 import axios from "axios";
 import { useState } from "react";
-import toast from "react-hot-toast";
 
 const AddUser = () => {
     const [formData, setFormData] = useState({
@@ -26,17 +25,15 @@ const AddUser = () => {
                         username: "",
                         password: "",
                     });
-                    {
-                        res.message && toast.success(res.message);
-                    }
+                    console.log(res.data);
                 })
                 .catch((err) => {
-                    toast.error(err);
+                    console.log(err);
+                    throw err;
                 });
         } catch (error) {
-            {
-                error.message && toast.error(error.message);
-            }
+            console.log(err);
+            throw error;
         }
     };
 

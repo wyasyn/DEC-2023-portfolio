@@ -4,6 +4,7 @@
     --clr-body: #516078;
     --clr-heading: #000021;
     --clr-primary: #1479ff;
+    --form-bdr: #2e374a;
     --transition: all 400ms ease-in-out;
 }
 
@@ -175,9 +176,12 @@ button {
         input,
         textarea {
             background-color: transparent;
-            border: 1px solid #2e374a;
+            border: 1px solid var(--form-bdr);
             padding: 0.75em;
             border-radius: 5px;
+            &::placeholder {
+                color: var(--form-bdr);
+            }
         }
         textarea {
             resize: none;
@@ -186,7 +190,7 @@ button {
             background-color: transparent;
             padding: 0.75em;
             cursor: pointer;
-            border: 1px solid #2e374a;
+            border: 1px solid var(--form-bdr);
             border-radius: 5px;
         }
     }

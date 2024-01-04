@@ -3,13 +3,19 @@ import {
     FaBlog,
     FaBriefcase,
     FaEnvelope,
-    FaEnvelopeSquare,
     FaGithub,
     FaLinkedinIn,
+    FaPhoneAlt,
     FaUser,
     FaWhatsapp,
 } from "react-icons/fa";
-import { MdComputer, MdGraphicEq, MdHome, MdMouse } from "react-icons/md";
+import {
+    MdComputer,
+    MdDashboard,
+    MdGraphicEq,
+    MdHome,
+    MdMouse,
+} from "react-icons/md";
 const myEmail = process.env.MY_EMAIL;
 const myPhone = process.env.MY_PHONE;
 export const linkData = [
@@ -36,12 +42,12 @@ export const linkData = [
     {
         name: "contact",
         url: "/contact",
-        icon: <FaEnvelopeSquare />,
+        icon: <FaPhoneAlt />,
     },
     {
         name: "admin",
         url: "/admin",
-        icon: <MdMouse />,
+        icon: <MdDashboard />,
     },
 ];
 

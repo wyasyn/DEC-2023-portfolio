@@ -15,3 +15,4 @@ export { default as Submit } from "./Submit/Submit";
 export { default as Process } from "./Process/Process";
 export { default as AboutContact } from "./AboutContact/AboutContact";
 export { default as Socials } from "./Socials/Socials";
+export { default as AdminStat } from "./AdminStat/AdminStat";
