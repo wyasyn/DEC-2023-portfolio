@@ -1,5 +1,6 @@
 .projects-main {
-    padding-block: 7em;
+    padding-top: 5em;
+    padding-bottom: 7em;
     .project-t {
         margin-bottom: 5em;
         h1 {
@@ -114,6 +115,7 @@
         }
     }
     @media screen and (min-width: 768px) {
-        padding-block: 10em;
+        padding-top: 5em;
+        padding-bottom: 15em;
     }
 }

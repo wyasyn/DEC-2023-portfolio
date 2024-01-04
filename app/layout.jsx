@@ -11,10 +11,10 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <Toaster position="top right" />
                 <Navbar />
-                {children}
+                <main>{children}</main>
                 <Footer />
+                <Toaster position="top right" />
             </body>
         </html>
     );

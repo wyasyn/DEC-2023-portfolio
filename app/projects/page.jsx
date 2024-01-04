@@ -16,7 +16,7 @@ import Link from "next/link";
 export default function page() {
     // const projects = await getProjects();
     return (
-        <main>
+        <>
             <div className="container projects-main">
                 <div className="project-t">
                     <small>Projects</small>
@@ -58,6 +58,6 @@ export default function page() {
                     })}
                 </div>
             </div>
-        </main>
+        </>
     );
 }

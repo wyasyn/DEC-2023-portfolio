@@ -1,32 +1,47 @@
 import { BsDatabase } from "react-icons/bs";
-import { FaEnvelope, FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import { MdComputer, MdGraphicEq, MdMouse } from "react-icons/md";
+import {
+    FaBlog,
+    FaBriefcase,
+    FaEnvelope,
+    FaEnvelopeSquare,
+    FaGithub,
+    FaLinkedinIn,
+    FaUser,
+    FaWhatsapp,
+} from "react-icons/fa";
+import { MdComputer, MdGraphicEq, MdHome, MdMouse } from "react-icons/md";
 const myEmail = process.env.MY_EMAIL;
 const myPhone = process.env.MY_PHONE;
 export const linkData = [
     {
         name: "home",
         url: "/",
+        icon: <MdHome />,
     },
     {
         name: "about",
         url: "/about",
+        icon: <FaUser />,
     },
     {
         name: "projects",
         url: "/projects",
+        icon: <FaBriefcase />,
     },
     {
         name: "blog",
         url: "/blog",
+        icon: <FaBlog />,
     },
     {
         name: "contact",
         url: "/contact",
+        icon: <FaEnvelopeSquare />,
     },
     {
         name: "admin",
         url: "/admin",
+        icon: <MdMouse />,
     },
 ];
 

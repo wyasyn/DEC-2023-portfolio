@@ -19,12 +19,7 @@ const AddUser = () => {
 
         try {
             axios
-                .post("/api/user", {
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData),
-                })
+                .post("/api/user", formData)
                 .then((res) => {
                     setFormData({
                         email: "",
@@ -48,35 +43,44 @@ const AddUser = () => {
     return (
         <div>
             <h2>Add User</h2>
-            <form onSubmit={handleSubmit}>
-                <label>Email:</label>
-                <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                />
+            <form className="form" onSubmit={handleSubmit}>
+                <div className="form-grp">
+                    <label htmlFor="username">Username:</label>
+                    <input
+                        id="username"
+                        type="text"
+                        name="username"
+                        value={formData.username}
+                        onChange={handleInputChange}
+                        required
+                    />
+                </div>
+                <div className="form-grp">
+                    <label htmlFor="email">Email:</label>
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                    />
+                </div>
 
-                <label>Username:</label>
-                <input
-                    type="text"
-                    name="username"
-                    value={formData.username}
-                    onChange={handleInputChange}
-                    required
-                />
+                <div className="form-grp">
+                    <label htmlFor="password">Password:</label>
+                    <input
+                        type="password"
+                        name="password"
+                        value={formData.password}
+                        onChange={handleInputChange}
+                        required
+                    />
+                </div>
 
-                <label>Password:</label>
-                <input
-                    type="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleInputChange}
-                    required
-                />
-
-                <button type="submit">Add User</button>
+                <button className="btn-c" type="submit">
+                    Add User
+                </button>
             </form>
         </div>
     );

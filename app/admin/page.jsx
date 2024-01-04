@@ -1,5 +1,7 @@
-import React from "react";
-
 export default function page() {
-    return <div>dashboard</div>;
+    return (
+        <section>
+            <h2>coming</h2>
+        </section>
+    );
 }
