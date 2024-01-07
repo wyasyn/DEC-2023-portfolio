@@ -25,6 +25,11 @@ export default function AdminNav() {
             {Nlinks.map((item) => {
                 return <AdminLink key={item.name} {...item} />;
             })}
+            <form action="">
+                <button className="logout" type="submit">
+                    <MdLogout /> Logout
+                </button>
+            </form>
         </nav>
     );
 }
